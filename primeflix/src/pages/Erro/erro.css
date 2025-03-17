@@ -1,0 +1,20 @@
+.not-found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+    flex-direction: column;
+}
+.not-found a{
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px;
+    color: #333;
+    margin: 5px;
+    border-radius: 5px;
+}
