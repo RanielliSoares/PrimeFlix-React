@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate, replace } from 'react-router-dom';
+import {toast} from 'react-toastify';
 
 import api from '../../services/api';
 import './filme.css';
@@ -21,13 +22,13 @@ function Filme() {
         //Se já tiver salvo o filme, não salva de novo
         const hasFilme = filmesSalvos.some((filmeSalvo) => filmeSalvo.id === filme.id);
         if (hasFilme) {
-            alert('Este filme ja esta na lista!');
+            toast.error('Este filme ja esta na lista!');
             return;
         }
 
         filmesSalvos.push(filme);
         localStorage.setItem('@primeflix', JSON.stringify(filmesSalvos));
-        alert('Filme Salvo com Sucesso!');
+        toast.success('Filme Salvo com Sucesso!');
         
     }
 
